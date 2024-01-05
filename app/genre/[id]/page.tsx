@@ -8,7 +8,11 @@ type Props = {
 };
 
 function GenrePage({ params: { id }, searchParams: { genre } }: Props) {
-  return <div>GenrePage</div>;
+  return (
+    <div>
+      Welcome to the genre with ID: {id} and name: {genre}
+    </div>
+  );
 }
 
 export default GenrePage;
