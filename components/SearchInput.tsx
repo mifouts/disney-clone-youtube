@@ -8,7 +8,7 @@ import { FormControl, FormField, Form, FormItem } from "./ui/form";
 import { Input } from "./ui/input";
 
 const formSchema = z.object({
-  username: z.string().min(2).max(50),
+  input: z.string().min(2).max(50),
 });
 
 function SearchInput() {
