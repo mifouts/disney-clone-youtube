@@ -36,6 +36,19 @@ async function GenreDropdown() {
       <DropdownMenuTrigger className="text-white flex justify-center items-center">
         Genre <ChevronDown className="ml-1" />
       </DropdownMenuTrigger>
+
+      <DropdownMenuContent>
+        <DropdownMenuLabel>Select a Genre</DropdownMenuLabel>
+        <DropdownMenuSeparator>
+          {data.genres.map((genre) => (
+            <DropdownMenuItem key={genre.id}>
+              <Link href={`/genre/${genre.id}?genre=${genre.name}`}>
+                {genre.name}
+              </Link>
+            </DropdownMenuItem>
+          ))}
+        </DropdownMenuSeparator>
+      </DropdownMenuContent>
     </DropdownMenu>
   );
 }
