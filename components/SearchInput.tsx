@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-import { FormControl, FormField } from "./ui/form";
+import { FormControl, FormField, Form, FormItem } from "./ui/form";
 import { Input } from "./ui/input";
 
 const formSchema = z.object({
@@ -35,7 +35,7 @@ function SearchInput() {
           render={({ field }) => (
             <FormItem>
               <FormControl>
-                <Input />
+                <Input placeholder="Search..." {...field} />
               </FormControl>
             </FormItem>
           )}
