@@ -12,7 +12,7 @@ function Header() {
           alt="Disney Logo"
           width={120}
           height={100}
-          className="cursor-pointer invert"
+          className="cursor-pointer invert-0 dark:invert"
         />
       </Link>
 
