@@ -1,3 +1,5 @@
+import { SearchResults } from "@/typings";
+
 async function fetchFromTMDB(url: URL, cacheTime?: number) {
   url.searchParams.set("include_adult", "false");
   url.searchParams.set("include_video", "false");
@@ -15,4 +17,14 @@ async function fetchFromTMDB(url: URL, cacheTime?: number) {
       revalidate: cacheTime || 60 * 60 * 24,
     },
   };
+  const response = await fetch(url.toString(), options);
+  const data = (await response.json()) as SearchResults;
+  return data;
+}
+
+export async function getUpcomingMovies() {
+  const url = new URL("https://api.themoviedb.org/3/movie/upcoming");
+  const data = await fetchFromTMDB(url);
+
+  return data.results;
 }
