@@ -1,7 +1,11 @@
 import { Movie } from "@/typings";
 
 function MovieCard({ movie }: { movie: Movie }) {
-  return <div>MovieCard</div>;
+  return (
+    <div>
+      <p>{movie.title}</p>
+    </div>
+  );
 }
 
 export default MovieCard;
