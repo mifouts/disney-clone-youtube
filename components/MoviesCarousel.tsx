@@ -1,4 +1,5 @@
 import { Movie } from "@/typings";
+import MovieCard from "./MovieCard";
 
 type Props = {
   title?: string;
@@ -11,8 +12,8 @@ function MoviesCarousel({ title, movies, isVertical }: Props) {
     <div className="z-50">
       <h2>{title}</h2>
 
-      {movies?.map(movie => (
-        <MovieCard key={movie.id} movie=[movie] />
+      {movies?.map((movie) => (
+        <MovieCard key={movie.id} movie={movie} />
       ))}
     </div>
   );
