@@ -4,8 +4,8 @@ import Image from "next/image";
 
 function MovieCard({ movie }: { movie: Movie }) {
   return (
-    <div>
-      <p>{movie.title}</p>
+    <div className="relative">
+      <p className="absolute z-20 bottom-5 left-5">{movie.title}</p>
       <Image
         className="w-fit lg:min-w-[400px] h-56 object-cover object-center shadow-md shadow-gray-900 drop-shadow-xl rounded-sm"
         src={getImagePath(movie.backdrop_path || movie.poster_path)}
