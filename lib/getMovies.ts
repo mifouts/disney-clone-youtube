@@ -42,3 +42,7 @@ export async function getPopularMovies() {
 
   return data.results;
 }
+
+export async function getDiscoverMovies(id?: string, keywords?: string) {
+  const url = new URL(`https://api.themoviedb.org/3/discover/movie`);
+}
