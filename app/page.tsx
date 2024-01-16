@@ -10,7 +10,7 @@ export default async function Home() {
   const topRatedMovies = await getTopRatedMovies();
   const popularMovies = await getPopularMovies();
   return (
-    <main className="text-red-500">
+    <main className="text-white">
       <h1>lets build disney</h1>
       <div className="flex flex-col space-y-2 xl:mt-48">
         <MoviesCarousel movies={upcomingMovies} title="Upcoming" />
