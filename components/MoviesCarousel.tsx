@@ -11,7 +11,7 @@ type Props = {
 function MoviesCarousel({ title, movies, isVertical }: Props) {
   return (
     <div className="z-50">
-      <h2>{title}</h2>
+      <h2 className="text-xl font-bold px-10 py-2">{title}</h2>
 
       <div
         className={cn(

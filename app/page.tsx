@@ -14,8 +14,8 @@ export default async function Home() {
       <h1>lets build disney</h1>
       <div className="flex flex-col space-y-2 xl:mt-48">
         <MoviesCarousel movies={upcomingMovies} title="Upcoming" />
-        <MoviesCarousel movies={topRatedMovies} title="Upcoming" />
-        <MoviesCarousel movies={popularMovies} title="Upcoming" />
+        <MoviesCarousel movies={topRatedMovies} title="Top Rated" />
+        <MoviesCarousel movies={popularMovies} title="Popular" />
       </div>
     </main>
   );
